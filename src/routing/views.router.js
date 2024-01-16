@@ -16,5 +16,6 @@ router.get("/restaurar",jwtValidation,viewRouter.restaurar);
 router.get("/error",viewRouter.error);
 router.get("/error-login",viewRouter.errorLogin);
 router.get("/message",authMiddleware("USER"),viewRouter.message);
+router.get("/loggerTest",viewRouter.loggerTest);
 
 export default router;

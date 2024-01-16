@@ -2,8 +2,9 @@ import dotenv from 'dotenv'
 import { program } from './process.js';
 
 const {mode}= program.opts();
-
+console.log('modo de entorno: ',mode);
 dotenv.config({
+    
     path:mode==='test'?'.env.testing'
     :mode==='production'?'.env.production'
     :'.env.development'
@@ -21,5 +22,6 @@ export default{
     "secretKeyJWT":process.env.SECRET_KEY_JWT,
     "nodemailerUser":process.env.NODEMAILER_USER,
     "nodemailerPassword":process.env.NODEMAILER_PASSWORD,
-    "rolUser":process.env.ROLE_USER
+    "rolUser":process.env.ROLE_USER,
+    "environment":process.env.ENVIRONMENT
 }

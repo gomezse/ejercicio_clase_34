@@ -1,8 +1,9 @@
 import { productsManager } from "../dao/models/mongoose/ProductsManager.js"
 import { cartsManager } from "../dao/models/mongoose/CartsManager.js";
-import { usersManager } from "../dao/models/mongoose/UsersManager.js";
+
 import config from "../utils/config.js";
 import jwt from "jsonwebtoken";
+import {logger} from "../utils/logger.js"
 
 const chat =async (req, res) => {
     const products = await productsManager.findAll(req.query);
@@ -83,6 +84,18 @@ const message= (req, res) => {
     res.render("messages");
 }  
 
+const loggerTest = (req, res) => {
+    //Todos los niveles de logger existentes.
+    logger.fatal('Este es un mensaje fatal');
+    logger.error('Este es un mensaje de error');
+    logger.warning('Este es un mensaje de advertencia');
+    logger.info('Este es un mensaje de información');
+    logger.http('Este es un mensaje HTTP');
+    logger.debug('Este es un mensaje de depuración');
+
+    res.status(200).json({ message: 'Logger ejecutado.' });
+}
+
 export const viewRouter = {
     "chat":chat,
     "products":products,
@@ -93,5 +106,6 @@ export const viewRouter = {
     "restaurar":restaurar,
     "error":error,
     "errorLogin":errorLogin,
-    "message":message
+    "message":message,
+    "loggerTest":loggerTest
 }

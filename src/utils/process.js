@@ -7,7 +7,7 @@ program
     .option('-m,--mode <mode>', 'Modo de trabajo', 'production')
 
 program.parse();
-// console.log('Options:', program.opts());
-// console.log('Remaining arguments', program.args);
+console.log('Options:', program.opts());
+console.log('Remaining arguments', program.args);
 
 process.on('exit', code => { console.log('Estoy saliendo del proceso.') });
