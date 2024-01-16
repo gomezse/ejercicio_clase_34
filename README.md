@@ -1,6 +1,4 @@
-# ejercicio_clase_34
-
-# ** Implementacion de Logger **.
+# **Implementación de Logger**.
 > [!IMPORTANT]
 > Utilizar los comandos de nodemon brindados para ejecutar la aplicacion en modo produccion o desarrollo, con el fin de agilizar configuraciones.
 
@@ -17,14 +15,15 @@ setear los valores en el proceso de inicio de la app.(definido en utils/process.
 
 ## Endpoints de prueba de logger:
 
-Produccion -> http://localhost:8080/loggerTest
+- Produccion -> http://localhost:8080/loggerTest
 (recordar que produccion ademas de loggear por consola también loggea en el archivo errors.log)
 
-Desarrollo -> http://localhost:8084/loggerTest
+- Desarrollo -> http://localhost:8084/loggerTest
 
 ## Archivos Involucrados:
-Configuracion de logger : utils/logger.js
-Variable de entorno environment: .env.development y .env.production (dependendiendo el modo en que se inicie la app, será su valor)
-Ruta de endpoint para probar el logger: routing/views.router.js  -> loggerTest
-Controller involucrado en el logger: controllers/view.controller.js -> loggerTest
+
+- Configuracion de logger : utils/logger.js
+* Variable de entorno environment: .env.development y .env.production (dependendiendo el modo en que se inicie la app, será su valor)
++ Ruta de endpoint para probar el logger: routing/views.router.js  -> loggerTest
+- Controller involucrado en el logger: controllers/view.controller.js -> loggerTest
 
