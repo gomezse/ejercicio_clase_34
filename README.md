@@ -26,4 +26,5 @@ setear los valores en el proceso de inicio de la app.(definido en utils/process.
 * Variable de entorno environment: .env.development y .env.production (dependendiendo el modo en que se inicie la app, será su valor)
 + Ruta de endpoint para probar el logger: routing/views.router.js  -> loggerTest
 - Controller involucrado en el logger: controllers/view.controller.js -> loggerTest
+- **Controller en el que se implementó logger : controllers/cart.controller.js¨** (se implementaron logs de info,error y fatal en los endpoints)
 

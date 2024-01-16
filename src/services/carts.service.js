@@ -2,7 +2,8 @@ import { cartsManager } from "../dao/models/mongoose/CartsManager.js";
 import { ticketsManager } from "../dao/models/mongoose/TicketsManager.js";
 import config from "../utils/config.js";
 import jwt from "jsonwebtoken";
-import {v4 as uuidv4} from 'uuid'
+import {v4 as uuidv4} from 'uuid';
+import {logger} from "../utils/logger.js";
 
 class CartService{
 
